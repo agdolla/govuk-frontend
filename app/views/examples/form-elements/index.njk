@@ -167,4 +167,21 @@
     {% endcall %}
 
   </form>
+
+  {{ govukCheckboxes({
+    idPrefix: "waste",
+    name: "waste",
+    errorMessage: {
+      text: "Date of birth must be in the past"
+    },
+    hint: {
+      text: "Select all that apply."
+    },
+    items: [
+      {
+        value: "carcasses",
+        text: "Waste from animal carcasses"
+      }
+    ]
+  }) }}
 {% endblock %}
